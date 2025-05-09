@@ -6,16 +6,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreenActivity">
-    
-    <RelativeLayout
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/white"-->
+<!--        tools:layout_editor_absoluteX="16dp"-->
+<!--        tools:layout_editor_absoluteY="360dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:src="@mipmap/ic_launcher" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textSplashScreen"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignStart="@+id/imageView"-->
+<!--            android:layout_alignEnd="@+id/imageView"-->
+<!--            android:layout_alignBottom="@+id/imageView"-->
+<!--            android:layout_marginStart="-167dp"-->
+<!--            android:layout_marginEnd="-169dp"-->
+<!--            android:layout_marginBottom="-290dp"-->
+<!--            android:text="Copyright By Mochammad Cahyahadi Fadhlurrahman"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="italic" />-->
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:gravity="center">
+
         <ImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentTop="true"
+
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            android:layout_centerInParent="true"/>
+            android:text="NewsApps"
+            android:textSize="28sp"
+            android:textColor="@color/biru"
+            android:layout_below="@id/logoIcon"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:textStyle="bold" />
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

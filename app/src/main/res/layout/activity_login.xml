@@ -6,58 +6,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
-    <LinearLayout
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="24dp"
-        tools:ignore="ExtraText">
-        <TextView
-            android:id="@+id/text_App"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="News App"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            android:textAlignment="center" />
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="16dp"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="Logo"
-            android:layout_gravity="center"
-            android:layout_margin="20dp" />
-        <TextView
-            android:id="@+id/text_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textAlignment="center" />
-        <EditText
-            android:id="@+id/formUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"/>
-        <EditText
-            android:id="@+id/formPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"/>
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"/>
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register"/>
+        tools:context=".LoginActivity">
 
-    </LinearLayout>
+        <!-- Background biru -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:background="#E0ECFF"
+            android:gravity="center"
+            android:paddingTop="48dp"
+            android:paddingBottom="24dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk ke NewsApps"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+        <!-- Kontainer putih di atas biru -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="280dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_white"
+                android:padding="24dp"
+                android:elevation="6dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="12dp"
+                    android:layout_marginTop="24dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="12dp"
+                    android:layout_marginTop="16dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Masuk"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#0033A0"
+                    android:layout_marginTop="24dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:id="@+id/registerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="24dp"
+            android:text="Belum punya akun? Daftar"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
